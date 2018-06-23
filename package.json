@@ -1,6 +1,6 @@
 {
-  "name": "netlify-cms-react-starter",
-  "version": "0.4.2",
+  "name": "@artsy/design-system",
+  "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "babel-eslint": "^8.0.1",
