@@ -1,28 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Box } from './Elements/Box'
+import { Flex } from './Elements/Flex'
+import ArtsyLogo from '../icons/artsy-logo'
 
-import Logo from './Logo'
 import NavLink from './NavLink'
-import './Nav.css'
+
+const Nav = Box.withComponent('nav')
 
 export default ({ handlePopupOpen }) => (
-  <nav className='Nav'>
-    <div className='Nav--Container container'>
-      <Link to='/'>
-        <Logo />
+  <Nav background="white" position="sticky" top="0" zIndex="1">
+    <Flex alignItems="center" height="80px">
+      <Link to="/">
+        <Box mx="20px">
+          <ArtsyLogo />
+        </Box>
       </Link>
-      <NavLink to='/' exact>
+      <NavLink to="/" exact>
         Home
       </NavLink>
-      <NavLink to='/about/' exact>
+      <NavLink to="/about/" exact>
         About
       </NavLink>
-      <NavLink to='/blog/' exact>
+      <NavLink to="/blog/" exact>
         Blog
       </NavLink>
-      <NavLink to='/contact/' exact>
+      <NavLink to="/contact/" exact>
         Contact
       </NavLink>
-    </div>
-  </nav>
+    </Flex>
+  </Nav>
 )
